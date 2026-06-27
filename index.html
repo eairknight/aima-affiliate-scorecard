@@ -1,0 +1,514 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AIMA Affiliate Lead Quality Scorecard</title>
+  <style>
+    :root {
+      --ink: #172033;
+      --muted: #5c677d;
+      --line: #d8dee9;
+      --soft: #f5f7fb;
+      --accent: #0f766e;
+      --accent-soft: #e5f4f1;
+      --warn: #a16207;
+      --bad: #b42318;
+      --good: #067647;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #eef2f7;
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.45;
+    }
+
+    main {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 32px 20px 56px;
+    }
+
+    header {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 28px;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: 30px;
+      line-height: 1.15;
+      letter-spacing: 0;
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: 20px;
+      letter-spacing: 0;
+    }
+
+    h3 {
+      margin: 18px 0 8px;
+      font-size: 16px;
+      letter-spacing: 0;
+    }
+
+    p {
+      margin: 0 0 12px;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      font-size: 15px;
+      max-width: 760px;
+    }
+
+    section {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 22px 24px;
+      margin: 16px 0;
+    }
+
+    .note {
+      background: var(--accent-soft);
+      border-left: 4px solid var(--accent);
+      padding: 12px 14px;
+      margin: 14px 0 0;
+      color: #17433f;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    .metric {
+      background: var(--soft);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px;
+    }
+
+    .metric strong {
+      display: block;
+      font-size: 24px;
+      line-height: 1.1;
+      margin-bottom: 4px;
+    }
+
+    .metric span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0 4px;
+      font-size: 14px;
+    }
+
+    th,
+    td {
+      border-bottom: 1px solid var(--line);
+      padding: 10px 9px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: var(--soft);
+      font-weight: 700;
+    }
+
+    td.num,
+    th.num {
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    .good {
+      color: var(--good);
+      font-weight: 700;
+    }
+
+    .warn {
+      color: var(--warn);
+      font-weight: 700;
+    }
+
+    .bad {
+      color: var(--bad);
+      font-weight: 700;
+    }
+
+    .steps {
+      padding-left: 20px;
+      margin: 10px 0 0;
+    }
+
+    .steps li {
+      margin: 8px 0;
+    }
+
+    code {
+      background: var(--soft);
+      border: 1px solid var(--line);
+      border-radius: 5px;
+      padding: 2px 5px;
+      font-family: Consolas, Monaco, monospace;
+      font-size: 0.95em;
+    }
+
+    .footer {
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 18px;
+    }
+
+    @media (max-width: 720px) {
+      main {
+        padding: 18px 12px 36px;
+      }
+
+      header,
+      section {
+        padding: 18px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      table {
+        font-size: 13px;
+      }
+
+      th,
+      td {
+        padding: 8px 6px;
+      }
+    }
+
+    @media print {
+      body {
+        background: var(--white);
+      }
+
+      main {
+        max-width: none;
+        padding: 0;
+      }
+
+      header,
+      section {
+        break-inside: avoid;
+        border-color: #c7ceda;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>AIMA Affiliate Lead Quality Scorecard</h1>
+      <p class="subtitle">
+        Use this to rate affiliate traffic quality from 1 to 10 after an affiliate has sent at least 20 AIMA Accelerator buyers.
+      </p>
+      <div class="note">
+        First quality read happens on day 3. Keep tracking day 7, day 14, and day 30 because some good buyers upgrade later.
+      </div>
+    </header>
+
+    <section>
+      <h2>Approved Payouts</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Geo</th>
+            <th class="num">CPA</th>
+            <th>Rule</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>US</td>
+            <td class="num">$130</td>
+            <td>Approved</td>
+          </tr>
+          <tr>
+            <td>GB</td>
+            <td class="num">$130</td>
+            <td>Approved</td>
+          </tr>
+          <tr>
+            <td>AU</td>
+            <td class="num">$130</td>
+            <td>Approved</td>
+          </tr>
+          <tr>
+            <td>CA</td>
+            <td class="num">$110</td>
+            <td>Approved</td>
+          </tr>
+          <tr>
+            <td>DE</td>
+            <td class="num">$110</td>
+            <td>Approved</td>
+          </tr>
+          <tr>
+            <td>All other geos</td>
+            <td class="num">$0</td>
+            <td>Do not pay unless manually approved in writing</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Definitions</h2>
+      <table>
+        <tbody>
+          <tr>
+            <th>AIMA buyer</th>
+            <td>Someone who bought the AIMA Accelerator front-end offer.</td>
+          </tr>
+          <tr>
+            <th>Checkout AOV</th>
+            <td>AIMA Accelerator purchase plus checkout order bumps.</td>
+          </tr>
+          <tr>
+            <th>Order bump</th>
+            <td>Unique Offer bump and/or Front-of-Line bump bought at checkout.</td>
+          </tr>
+          <tr>
+            <th>Tech stack</th>
+            <td>CRM and/or inboxes.</td>
+          </tr>
+          <tr>
+            <th>Day-3 tech stack</th>
+            <td>Buyer purchased CRM/inboxes within 3 calendar days of buying AIMA.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Day-3 Benchmarks</h2>
+      <div class="grid">
+        <div class="metric">
+          <strong>25%</strong>
+          <span>Goal for day-3 tech-stack rate</span>
+        </div>
+        <div class="metric">
+          <strong>40%+</strong>
+          <span>Goal for order bump rate</span>
+        </div>
+        <div class="metric">
+          <strong>$80 / $70</strong>
+          <span>Checkout AOV goals by geo group</span>
+        </div>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Metric</th>
+            <th class="num">US / GB / AU</th>
+            <th class="num">CA / DE</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Day-3 tech-stack goal</td>
+            <td class="num">25%</td>
+            <td class="num">25%</td>
+          </tr>
+          <tr>
+            <td>Minimum acceptable day-3 tech-stack rate</td>
+            <td class="num">17%</td>
+            <td class="num">17%</td>
+          </tr>
+          <tr>
+            <td>Bad day-3 tech-stack rate</td>
+            <td class="num">Under 12%</td>
+            <td class="num">Under 12%</td>
+          </tr>
+          <tr>
+            <td>Order bump rate goal</td>
+            <td class="num">40%+</td>
+            <td class="num">40%+</td>
+          </tr>
+          <tr>
+            <td>Checkout AOV goal</td>
+            <td class="num">$80+</td>
+            <td class="num">$70+</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Scoring Rules</h2>
+      <p>Only score an affiliate after at least <strong>20 AIMA buyers</strong>. Before that, show <strong>insufficient sample</strong>.</p>
+
+      <h3>Start at 0 points</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Condition</th>
+            <th class="num">Points</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>100% of paid conversions are approved geos</td>
+            <td class="num">+2</td>
+          </tr>
+          <tr>
+            <td>Day-3 tech-stack rate is 25%+</td>
+            <td class="num">+4</td>
+          </tr>
+          <tr>
+            <td>Day-3 tech-stack rate is 17% to 24.9%</td>
+            <td class="num">+2</td>
+          </tr>
+          <tr>
+            <td>Day-3 tech-stack rate is 12% to 16.9%</td>
+            <td class="num">+1</td>
+          </tr>
+          <tr>
+            <td>Order bump rate is 40%+</td>
+            <td class="num">+2</td>
+          </tr>
+          <tr>
+            <td>Order bump rate is 30% to 39.9%</td>
+            <td class="num">+1</td>
+          </tr>
+          <tr>
+            <td>Checkout AOV meets the geo-group goal</td>
+            <td class="num">+2</td>
+          </tr>
+          <tr>
+            <td>Checkout AOV is within $10 below the geo-group goal</td>
+            <td class="num">+1</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>Cap the final score at <strong>10</strong>.</p>
+    </section>
+
+    <section>
+      <h2>Penalties</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Condition</th>
+            <th class="num">Penalty</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Any unapproved geo included in payout request</td>
+            <td class="num">-2</td>
+          </tr>
+          <tr>
+            <td>More than 10% unapproved geos</td>
+            <td class="num">-4</td>
+          </tr>
+          <tr>
+            <td>Refund, fake, or test rate above 5%</td>
+            <td class="num">-2</td>
+          </tr>
+          <tr>
+            <td>Day-3 tech-stack rate under 12% after 20+ buyers</td>
+            <td class="num">Max score 5</td>
+          </tr>
+          <tr>
+            <td>Day-3 tech-stack rate under 12% and order bump rate under 30%</td>
+            <td class="num">Max score 3</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Score Meaning</h2>
+      <table>
+        <thead>
+          <tr>
+            <th class="num">Score</th>
+            <th>Rating</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="num">9-10</td>
+            <td class="good">Excellent</td>
+            <td>Scale</td>
+          </tr>
+          <tr>
+            <td class="num">7-8</td>
+            <td class="good">Good</td>
+            <td>Keep running</td>
+          </tr>
+          <tr>
+            <td class="num">5-6</td>
+            <td class="warn">Mixed</td>
+            <td>Watch until day 7 or day 14</td>
+          </tr>
+          <tr>
+            <td class="num">3-4</td>
+            <td class="bad">Bad</td>
+            <td>Pause unless sample is tiny</td>
+          </tr>
+          <tr>
+            <td class="num">1-2</td>
+            <td class="bad">Very bad</td>
+            <td>Cut</td>
+          </tr>
+          <tr>
+            <td class="num">0</td>
+            <td class="bad">Invalid</td>
+            <td>Mostly unapproved or junk traffic</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Quick Decision Rules</h2>
+      <ol class="steps">
+        <li>Only pay for approved geos: US, GB, AU, CA, DE.</li>
+        <li>Wait until the affiliate has at least 20 AIMA buyers before assigning a score.</li>
+        <li>By day 3, expect roughly 1 tech-stack buyer per 4 AIMA buyers.</li>
+        <li>If day-3 tech stack is low but order bump rate and AOV are strong, keep watching to day 7 or day 14.</li>
+        <li>If day-3 tech stack is low and order bump rate/AOV are weak, pause the affiliate.</li>
+      </ol>
+
+      <h3>Example</h3>
+      <p>
+        If an affiliate sends 20 US/GB/AU buyers, the day-3 goal is about 5 tech-stack buyers.
+        3-4 is acceptable but worth watching. 0-2 is bad unless checkout AOV and order bump rate are unusually strong.
+      </p>
+    </section>
+
+    <p class="footer">Prepared for AIMA Accelerator affiliate quality scoring.</p>
+  </main>
+</body>
+</html>
