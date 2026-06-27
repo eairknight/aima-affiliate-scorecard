@@ -364,7 +364,8 @@
 
     <section>
       <h2>Scoring Rules</h2>
-      <p>Only score an affiliate after at least <strong>20 AIMA buyers</strong>. Before that, show <strong>insufficient sample</strong>.</p>
+      <p>Only score an affiliate after at least <strong>20 approved-geo AIMA buyers</strong>. Before that, show <strong>insufficient sample</strong>.</p>
+      <p>Do not include non-approved geos in the score. They are simply not payable conversions.</p>
 
       <h3>Start at 0 points</h3>
       <table>
@@ -376,16 +377,12 @@
         </thead>
         <tbody>
           <tr>
-            <td>100% of paid conversions are approved geos</td>
-            <td class="num">+2</td>
-          </tr>
-          <tr>
             <td>Day-3 tech-stack rate is 25%+</td>
-            <td class="num">+4</td>
+            <td class="num">+5</td>
           </tr>
           <tr>
             <td>Day-3 tech-stack rate is 17% to 24.9%</td>
-            <td class="num">+2</td>
+            <td class="num">+3</td>
           </tr>
           <tr>
             <td>Day-3 tech-stack rate is 12% to 16.9%</td>
@@ -401,7 +398,7 @@
           </tr>
           <tr>
             <td>Checkout AOV meets the geo-group goal</td>
-            <td class="num">+2</td>
+            <td class="num">+3</td>
           </tr>
           <tr>
             <td>Checkout AOV is within $10 below the geo-group goal</td>
@@ -422,14 +419,6 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>Any unapproved geo included in payout request</td>
-            <td class="num">-2</td>
-          </tr>
-          <tr>
-            <td>More than 10% unapproved geos</td>
-            <td class="num">-4</td>
-          </tr>
           <tr>
             <td>Refund, fake, or test rate above 5%</td>
             <td class="num">-2</td>
@@ -485,7 +474,7 @@
           <tr>
             <td class="num">0</td>
             <td class="bad">Invalid</td>
-            <td>Mostly unapproved or junk traffic</td>
+            <td>No payable conversions or junk traffic</td>
           </tr>
         </tbody>
       </table>
@@ -495,7 +484,7 @@
       <h2>Quick Decision Rules</h2>
       <ol class="steps">
         <li>Only pay for approved geos: US, GB, AU, CA, DE.</li>
-        <li>Wait until the affiliate has at least 20 AIMA buyers before assigning a score.</li>
+        <li>Wait until the affiliate has at least 20 approved-geo AIMA buyers before assigning a score.</li>
         <li>By day 3, expect roughly 1 tech-stack buyer per 4 AIMA buyers.</li>
         <li>If day-3 tech stack is low but order bump rate and AOV are strong, keep watching to day 7 or day 14.</li>
         <li>If day-3 tech stack is low and order bump rate/AOV are weak, pause the affiliate.</li>
